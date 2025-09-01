@@ -1,7 +1,16 @@
 
+import {useState} from 'react';
 
 
 function Header() {
+
+    const [isOpen, setOpen] = useState(false);
+
+    // toggle function
+    const toggleMenu = () =>{
+        setOpen(!isOpen);
+    };
+
     return (
             <section className="header">
 
@@ -9,7 +18,7 @@ function Header() {
             <i className="fas fa-utensils"></i> Food 
         </a>
 
-        <nav className="navbar">
+        <nav className="navbar" id={isOpen ? "active" : ""} >
             <a href="#home">home</a>
             <a href="#about">about</a>
             <a href="#food">food</a>
@@ -19,7 +28,7 @@ function Header() {
             <a href="#blogs">blog</a>
         </nav>
 
-        <div id="menu-btn" className="fas fa-bars" ></div>
+        <div id="menu-btn" className="fas fa-bars" onClick={toggleMenu} ></div>
 
     </section>
     )

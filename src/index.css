@@ -846,7 +846,7 @@ section{
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    .header .navbar.active{
+    .header .navbar#active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 

@@ -1,4 +1,10 @@
-
+import food13 from "../assets/food13.jpg";
+import food14 from "../assets/food14.jpg";
+import food15 from "../assets/food15.jpg";
+import food16 from "../assets/food16.jpg";
+import food17 from "../assets/food17.jpg";
+import food19 from "../assets/food19.jpg";
+import food20 from "../assets/food20.jpg";
 
 function Gallery(){
     return (
@@ -12,33 +18,33 @@ function Gallery(){
 
         <div class="gallery-container" >
 
-            <a href="./images/food10.jpg" class="box" >
-                {/* <img src="./images/food10.jpg" > */}
+            <a href={food13} class="box" >
+                <img src={food13} />
                 <div class="icon" > <i class="fas fa-plus" ></i> </div>
             </a>
 
-            <a href="./images/food11.jpg" class="box" >
-                {/* <img src="./images/food11.jpg" > */}
+            <a href={food14} class="box" >
+                <img src={food14} />
                 <div class="icon" > <i class="fas fa-plus" ></i> </div>
             </a>
             
-            <a href="./images/food12.jpg" class="box" >
-                {/* <img src="./images/food12.jpg" > */}
+            <a href={food15} class="box" >
+                <img src={food15} />
                 <div class="icon" > <i class="fas fa-plus" ></i> </div>
             </a>
             
-            <a href="./images/food13.jpg" class="box" >
-                {/* <img src="./images/food13.jpg" > */}
+            <a href={food16} class="box" >
+                <img src={food16} />
                 <div class="icon" > <i class="fas fa-plus" ></i> </div>
             </a>
             
-            <a href="./images/food14.jpg" class="box" >
-                {/* <img src="./images/food14.jpg" > */}
+            <a href={food17} class="box" >
+                <img src={food17} />
                 <div class="icon" > <i class="fas fa-plus" ></i> </div>
             </a>
             
-            <a href="./images/food15.jpg" class="box" >
-                {/* <img src="./images/food15.jpg" > */}
+            <a href={food19} class="box" >
+                <img src={food19} />
                 <div class="icon" > <i class="fas fa-plus" ></i> </div>
             </a>
 

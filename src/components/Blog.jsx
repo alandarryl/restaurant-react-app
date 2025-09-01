@@ -7,6 +7,13 @@ import food17 from '../assets/food17.jpg';
 import food19 from '../assets/food19.jpg';
 import food20 from '../assets/food20.jpg';
 
+// import swiper 
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+
 function Blog(){
     return (
     <section class="blogs" id="blogs">
@@ -16,135 +23,143 @@ function Blog(){
             <h3>our latest pots</h3>
         </div>
 
-        <div class="swiper blogs-slider">
-
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide slide">
-                    <div class="image">
-                        <img src={food13} alt="" />
-                        <span>croissant</span>
-                    </div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href="#"><i class="fas fa-calendar" ></i>21st may, 2022</a>
-                            <a href="#"><i class="fas fa-user" ></i>by admin</a>
-                        </div>
-                        <a href="#" class="title">blog title goes here</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-
-                <div class="swiper-slide slide">
-                    <div class="image">
-                        <img src={food14} alt="" />
-                        <span>burger</span>
-                    </div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href="#"><i class="fas fa-calendar" ></i>21st may, 2022</a>
-                            <a href="#"><i class="fas fa-user" ></i>by admin</a>
-                        </div>
-                        <a href="#" class="title">blog title goes here</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-
-                <div class="swiper-slide slide">
-                    <div class="image">
-                        <img src={food15} alt="" />
-                        <span>noodle</span>
-                    </div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href="#"><i class="fas fa-calendar" ></i>21st may, 2022</a>
-                            <a href="#"><i class="fas fa-user" ></i>by admin</a>
-                        </div>
-                        <a href="#" class="title">blog title goes here</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-
-                <div class="swiper-slide slide">
-                    <div class="image">
-                        <img src={food16} alt="" />
-                        <span>chicken</span>
-                    </div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href="#"><i class="fas fa-calendar" ></i>21st may, 2022</a>
-                            <a href="#"><i class="fas fa-user" ></i>by admin</a>
-                        </div>
-                        <a href="#" class="title">blog title goes here</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-
-                <div class="swiper-slide slide">
-                    <div class="image">
-                        <img src={food17} alt="" />
-                        <span>fried saumon</span>
-                    </div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href="#"><i class="fas fa-calendar" ></i>21st may, 2022</a>
-                            <a href="#"><i class="fas fa-user" ></i>by admin</a>
-                        </div>
-                        <a href="#" class="title">blog title goes here</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-
-                <div class="swiper-slide slide">
-                    <div class="image">
-                        <img src={food19} alt="" />
-                        <span>burger</span>
-                    </div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href="#"><i class="fas fa-calendar" ></i>21st may, 2022</a>
-                            <a href="#"><i class="fas fa-user" ></i>by admin</a>
-                        </div>
-                        <a href="#" class="title">blog title goes here</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide slide">
-                    <div class="image">
-                        <img src={food20} alt="" />
-                        <span>fried</span>
-                    </div>
-                    <div class="content">
-                        <div class="icon">
-                            <a href="#"><i class="fas fa-calendar" ></i>21st may, 2022</a>
-                            <a href="#"><i class="fas fa-user" ></i>by admin</a>
-                        </div>
-                        <a href="#" class="title">blog title goes here</a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-
-
+        <Swiper
+        modules={[Pagination]}
+        spaceBetween={30}
+        slidesPerView={3}
+        pagination={{ clickable: true }}
+    >
+        <SwiperSlide>
+        <div className="slide">
+            <div className="image">
+            <img src={food13} alt="croissant" />
+            <span>croissant</span>
             </div>
-
-            <div class="swiper-pagination"></div>
-
-
+            <div className="content">
+            <div className="icon">
+                <a href="#"><i className="fas fa-calendar"></i>21st May, 2022</a>
+                <a href="#"><i className="fas fa-user"></i>by admin</a>
+            </div>
+            <a href="#" className="title">blog title goes here</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
+            <a href="#" className="btn">read more</a>
+            </div>
         </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className="slide">
+            <div className="image">
+            <img src={food14} alt="croissant" />
+            <span>croissant</span>
+            </div>
+            <div className="content">
+            <div className="icon">
+                <a href="#"><i className="fas fa-calendar"></i>21st May, 2022</a>
+                <a href="#"><i className="fas fa-user"></i>by admin</a>
+            </div>
+            <a href="#" className="title">blog title goes here</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
+            <a href="#" className="btn">read more</a>
+            </div>
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className="slide">
+            <div className="image">
+            <img src={food15} alt="croissant" />
+            <span>croissant</span>
+            </div>
+            <div className="content">
+            <div className="icon">
+                <a href="#"><i className="fas fa-calendar"></i>21st May, 2022</a>
+                <a href="#"><i className="fas fa-user"></i>by admin</a>
+            </div>
+            <a href="#" className="title">blog title goes here</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
+            <a href="#" className="btn">read more</a>
+            </div>
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className="slide">
+            <div className="image">
+            <img src={food16} alt="croissant" />
+            <span>croissant</span>
+            </div>
+            <div className="content">
+            <div className="icon">
+                <a href="#"><i className="fas fa-calendar"></i>21st May, 2022</a>
+                <a href="#"><i className="fas fa-user"></i>by admin</a>
+            </div>
+            <a href="#" className="title">blog title goes here</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
+            <a href="#" className="btn">read more</a>
+            </div>
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className="slide">
+            <div className="image">
+            <img src={food17} alt="croissant" />
+            <span>croissant</span>
+            </div>
+            <div className="content">
+            <div className="icon">
+                <a href="#"><i className="fas fa-calendar"></i>21st May, 2022</a>
+                <a href="#"><i className="fas fa-user"></i>by admin</a>
+            </div>
+            <a href="#" className="title">blog title goes here</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
+            <a href="#" className="btn">read more</a>
+            </div>
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className="slide">
+            <div className="image">
+            <img src={food19} alt="croissant" />
+            <span>croissant</span>
+            </div>
+            <div className="content">
+            <div className="icon">
+                <a href="#"><i className="fas fa-calendar"></i>21st May, 2022</a>
+                <a href="#"><i className="fas fa-user"></i>by admin</a>
+            </div>
+            <a href="#" className="title">blog title goes here</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
+            <a href="#" className="btn">read more</a>
+            </div>
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className="slide">
+            <div className="image">
+            <img src={food20} alt="croissant" />
+            <span>croissant</span>
+            </div>
+            <div className="content">
+            <div className="icon">
+                <a href="#"><i className="fas fa-calendar"></i>21st May, 2022</a>
+                <a href="#"><i className="fas fa-user"></i>by admin</a>
+            </div>
+            <a href="#" className="title">blog title goes here</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ipsam?</p>
+            <a href="#" className="btn">read more</a>
+            </div>
+        </div>
+        </SwiperSlide>
+
+        {/* Repeat for other blog slides */}
+        <SwiperSlide> {/* second blog */} </SwiperSlide>
+        <SwiperSlide> {/* third blog */} </SwiperSlide>
+        {/* ... */}
+    </Swiper>
 
 
     </section>
